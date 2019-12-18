@@ -1,6 +1,31 @@
 # Course Information
 
-## Overview
+## What is this course about
+
+Machine Learning problems fall into two general categories: *supervised* and *unsupervised* learning.  
+
+In supervised learning one starts with a large set of "known data" and
+then tries to fit new data into the pattern determined by what's
+known.  For example, classifying an image based on a large dataset of
+labelled images, or predicting a home price based on a database of
+homes and their selling prices, are supervised problems.
+
+In unsupervised learning one seeks to uncover patterns in data *ab
+initio.* For one example, given RNA expression data for a large group
+of cells, one tries to identify different types of cells that are
+similar to each other without knowing in advance how to characterize
+cell types.  For another, one might try to extract different
+"personality types" from the results of a questionnaire by identifying
+groups of people whose answers are similar to each other.  One rather
+spectacular type of unsupervised learning is teaching a system to play
+a game by having it develop strategies from scratch.
+
+Data Science/Machine Learning is a "hot topic" and the web is filled, not only with a very 
+deep scientific literature and powerful 
+open source software packages, but also tutorials, blog posts, and entire courses on different
+approaches to machine learning.
+
+## Course Overview
 
 The goal of this course is for each student (or, better, each of several small groups of students)
 to choose a machine learning problem and dataset and to complete a project that includes the following 
@@ -39,28 +64,6 @@ Because we are trying to learn a huge subject in a short time, and because the p
 varying background, we all have something to contribute.
 
 Each team should be prepared to show some element of their project at each meeting, whether to illustrate progress or to raise a question. 
-
-Data Science/Machine Learning is a "hot topic" and the web is filled, not only with powerful 
-open source software packages, but also tutorials, blog posts, and entire courses on different
-approaches to machine learning.
-
-Machine Learning projects fall into two general categories: *supervised* and *unsupervised* learning.  
-
-In supervised learning one starts with a large set of "known data" and
-then tries to fit new data into the pattern determined by what's
-known.  For example, classifying an image based on a large dataset of
-labelled images, or predicting a home price based on a database of
-homes and their selling prices, are supervised problems.
-
-In unsupervised learning one seeks to uncover patterns in data *ab
-initio.* For one example, given RNA expression data for a large group
-of cells, one tries to identify different types of cells that are
-similar to each other without knowing in advance how to characterize
-cell types.  For another, one might try to extract different
-"personality types" from the results of a questionnaire by identifying
-groups of people whose answers are similar to each other.  One rather
-spectacular type of unsupervised learning is teaching a system to play
-a game by having it develop strategies from scratch.
 
 ## Where to look for data
 
