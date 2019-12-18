@@ -2,8 +2,11 @@
 
 
 [Jeremy Teitelbaum](http://jeremy9959.net)
+
 University of Connecticut
+
 Department of Mathematics
+
 Math 5800, Spring Term 2020
 
 
