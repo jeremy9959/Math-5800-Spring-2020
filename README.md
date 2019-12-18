@@ -1,6 +1,6 @@
 # Mathematical Aspects of Machine Learning
 
-<img src="HAL.jpg" width=100>
+<img src="https://github.com/jeremy9959/Math-5800-Spring-2020/blob/gh-pages/HAL.jpg" width=100>
 
 [Jeremy Teitelbaum](http://jeremy9959.net)<br>
 University of Connecticut<br>
