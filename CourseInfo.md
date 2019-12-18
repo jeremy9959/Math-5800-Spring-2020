@@ -6,13 +6,12 @@ The goal of this course is for each student (or, better, each of several small g
 to choose a machine learning problem and dataset and to complete a project that includes the following 
 elements:
 
-	1) An overview of the problem and how it fits into the general machine learning landscape.
-	2) Identification of a relevant dataset and a presentation of the notable features of the selected dataset.
-	3) A choice of approach with justification.
-	4) An overview of the mathematical foundations of the approach.  This overview should include a more detailed
-	mathematical explanation of at least one aspect of the technique being employed.
-	5) An fully documented implementation of the approach using available software tools.
-	6) A report on the conclusions of the project.
+1) An overview of the problem and how it fits into the general machine learning landscape.
+2) Identification of a relevant dataset and a presentation of the notable features of the selected dataset.
+3) A choice of approach with justification.
+4) An overview of the mathematical foundations of the approach.  This overview should include a more detailed mathematical explanation of at least one aspect of the technique being employed.
+5) An fully documented implementation of the approach using available software tools.
+6) A report on the conclusions of the project.
 	
 Depending on your team's strengths and interests, 
 you may emphasize different aspects of this project.  For example:
@@ -39,10 +38,7 @@ The course meetings will be devoted to progress reports and the sharing of sugge
 Because we are trying to learn a huge subject in a short time, and because the participants have
 varying background, we all have something to contribute.
 
-Each team should be prepared to show some element of their project at each meeting, whether to illustrate
-progress or to raise a question. 
-
-## Where to look for data
+Each team should be prepared to show some element of their project at each meeting, whether to illustrate progress or to raise a question. 
 
 Data Science/Machine Learning is a "hot topic" and the web is filled, not only with powerful 
 open source software packages, but also tutorials, blog posts, and entire courses on different
@@ -66,8 +62,9 @@ groups of people whose answers are similar to each other.  One rather
 spectacular type of unsupervised learning is teaching a system to play
 a game by having it develop strategies from scratch.
 
+## Where to look for data
 
-## Kaggle
+### Kaggle
 
 The [Kaggle](http://kaggle.com) site hosts data science competitions with cash (and other) prizes.  Many of these
 competitions are very sophisticated and doing well in them requires expertise and also specialized
@@ -76,7 +73,7 @@ even if you aren't actually competing.
 
 If you *are* interested in doing one of these competitions, we can talk.
 
-## Other Data Sources
+### Other Data Sources
 
 - [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php) contains about
 500 datasets on all sorts of things for use "by the machine learning
