@@ -31,12 +31,12 @@ The goal of this course is for each student (or, better, each of several small g
 to choose a machine learning problem and dataset and to complete a project that includes the following 
 elements:
 
-1) An overview of the problem and how it fits into the general machine learning landscape.
-2) Identification of a relevant dataset and a presentation of the notable features of the selected dataset.
-3) A choice of approach with justification.
-4) An overview of the mathematical foundations of the approach.  This overview should include a more detailed mathematical explanation of at least one aspect of the technique being employed.
-5) An fully documented implementation of the approach using available software tools.
-6) A report on the conclusions of the project.
+1. An overview of the problem and how it fits into the general machine learning landscape.
+2. Identification of a relevant dataset and a presentation of the notable features of the selected dataset.
+3. A choice of approach with justification.
+4. An overview of the mathematical foundations of the approach.  This overview should include a more detailed mathematical explanation of at least one aspect of the technique being employed.
+5. An fully documented implementation of the approach using available software tools.
+6. A report on the conclusions of the project.
 	
 Depending on your team's strengths and interests, 
 you may emphasize different aspects of this project.  For example:
