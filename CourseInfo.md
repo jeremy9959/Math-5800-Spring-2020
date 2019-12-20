@@ -43,11 +43,24 @@ you may emphasize different aspects of this project.  For example:
 
 - if you are more interested in the problem of harvesting data from the web (such as images, text, or
 social relationships) then you might want to emphasize step 2 and use a simpler algorithm in steps 3-4
-to show that the data you've harvested is interesting.  
+to show that the data you've harvested is interesting.
 
 - if you are more interested in the mathematical
-foundations of an algorithm, you could choose a simpler dataset (and algorithm) and emphasize step 4,
-working carefully through the mathematics.
+foundations of an algorithm, you could *start* with an algorithm and emphasize step 4,
+working carefully through the mathematics. Some of the algorithms worth investigating are:
+
+    - Logistic regression. This is an important foundational algorithm for machine learning.
+	- Decision Trees. Decision trees, especially "boosted" trees, are widely used in practical applications.
+	- Neural Networks.  Neural networks are where many of the most spectacular advances have taken place. The most accessible place to start might be with Convolutional Networks for image classification.
+	- Word Vectors.  These are techniques for working with Natural Language; the foundational algorithm is called word2vec.
+	- Linear Methods. Support vector machines and other linear classifiers are "classic" machine learning methods that have a lot of interesting associated mathematics.
+
+	
+Fundamentally, machine learning involve minimizing the value of a "loss function" by adjusting parameters.
+The most common approach to this is *gradient descent*. Another approach to the project is to look
+at loss functions and optimization methods more generally. 
+
+Another approach to optimization is via Monte Carlo methods, and this would serve as another gateway to the project.
 
 - if you are more interested in implementation, you could focus your efforts on step 5 by developing
 a custom implementation of an algorithm.
@@ -99,7 +112,18 @@ read it; see [The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organiza
 
 - The [Network Repository](http://networkrepository.com) has a wide range of graphs/networks to study.
 
+### References
 
+The following books are standard references. A project can be built on just one chapter of these books.
+
+- [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) by Hastie, Tibshirani,
+and Friedman.
+
+- [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by Christopher Bishop.
+
+- [Probabilistic Graphical Models](https://mitpress.mit.edu/books/probabilistic-graphical-models) by Koller and Friedman.
+
+It's also worth knowing that one can access the *entire* O'Reilly Library through the UConn Library.  
 
  
 
