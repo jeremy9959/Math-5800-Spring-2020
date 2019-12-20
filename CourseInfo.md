@@ -54,13 +54,12 @@ working carefully through the mathematics. Some of the algorithms worth investig
 	- Neural Networks.  Neural networks are where many of the most spectacular advances have taken place. The most accessible place to start might be with Convolutional Networks for image classification.
 	- Word Vectors.  These are techniques for working with Natural Language; the foundational algorithm is called word2vec.
 	- Linear Methods. Support vector machines and other linear classifiers are "classic" machine learning methods that have a lot of interesting associated mathematics.
-
+	- Spectral Methods.  These are techniques for studying graphs
+   
 	
 Fundamentally, machine learning involve minimizing the value of a "loss function" by adjusting parameters.
-The most common approach to this is *gradient descent*. Another approach to the project is to look
-at loss functions and optimization methods more generally. 
-
-Another approach to optimization is via Monte Carlo methods, and this would serve as another gateway to the project.
+The most common approach to this is *gradient descent*. 
+Another approach to optimization is via *Monte Carlo* methods.  You could focus your project on optimization.
 
 - if you are more interested in implementation, you could focus your efforts on step 5 by developing
 a custom implementation of an algorithm.
@@ -114,7 +113,8 @@ read it; see [The Cancer Genome Atlas](https://www.cancer.gov/about-nci/organiza
 
 ### References
 
-The following books are standard references. A project can be built on just one chapter of these books.
+The following books are standard references. A project can be built on just one chapter (or section of a chapter!)
+of these books.  
 
 - [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) by Hastie, Tibshirani,
 and Friedman.
