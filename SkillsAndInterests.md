@@ -6,8 +6,15 @@ overlapping interests.
 
 To do this assessment, we will divide up the whiteboards in Bousefield A105 by skills
 and interests and people will write their names in places that match their profile.
-Incidentally, I know a few of the things on the list, but there are lots of things here  I don't know,
-though I wish I did, so don't be intimidated!
+
+Two comments:
+
+**I know a few of the things on the list, but there are lots of things here  I don't know,
+though I wish I did, so don't be intimidated!**
+
+**The very "know" in this context means -- I have done this, I'm familiar with it. It does  not
+mean "I am prepared
+to take an exam on the topic right now!"**
 
 ### Relevant skills
 
