@@ -35,7 +35,7 @@ elements:
 2. Identification of a relevant dataset and a presentation of the notable features of the selected dataset.
 3. A choice of approach with justification.
 4. An overview of the mathematical foundations of the approach.  This overview should include a more detailed mathematical explanation of at least one aspect of the technique being employed.
-5. An fully documented implementation of the approach using available software tools.
+5. A fully documented implementation of the approach using available software tools.
 6. A report on the conclusions of the project.
 	
 Depending on your team's strengths and interests, 
