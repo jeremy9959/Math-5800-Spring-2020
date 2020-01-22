@@ -12,3 +12,5 @@ Math 5800, Spring Term 2020<br>
 See the [Course Information Page](CourseInfo.md) for details.
 
 [Skills and Interests Inventory.](SkillsAndInterests.md)
+
+[Python Programming References](ProgrammingReferences.md)
