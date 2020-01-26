@@ -14,9 +14,10 @@ Math 5800, Spring Term 2020<br>
 - [Course Information Page](CourseInfo.md) 
 - [Skills and Interests Inventory.](SkillsAndInterests.md)
 
-### References
+### References and News
 
 - [Python Programming References](ProgrammingReferences.md)
+- [Google DataSets Announcement](https://blog.google/products/search/discovering-millions-datasets-web/)
 
 ### Assignments
 
