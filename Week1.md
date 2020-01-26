@@ -1,6 +1,19 @@
 ## Goals for January 27 - February 3
 
-### Identify some preliminary working groups
+To summarize, the goals for this week are:
+
+- [to form some preliminary working groups](#groups)
+- [for each participant to create a github site](#github)
+- [to create an initial list of resources and references and document them on that site](#references)
+
+There is also a reading assignment:
+
+[What is data science? Chapter 1 of Doing Data Science by O'Neill and Schutt](https://learning.oreilly.com/library/view/doing-data-science/9781449363871/ch01.html).  UConn NetID required -- Available through the UConn Library.
+
+
+### <a name="groups"></a> Form some preliminary working groups
+
+
 
 As we learned last week, people in the class have diverse interests.  Reading over my notes
 I can identify a few topic area themes that people are interested in.  These included:
@@ -27,10 +40,9 @@ shooting for 3-4 people. I'm not much for social engineering so if you'd prefer 
 
 Bottom line is that **by Wednesday, January 28** I'd like to know who is working together to start.
 
-**Reading:** [What is data science? Chapter 1 of Doing Data Science by O'Neill and Schutt](https://learning.oreilly.com/library/view/doing-data-science/9781449363871/ch01.html).  UConn NetID required -- Available through the UConn Library.
 
 
-### Create GitHub sites 
+### <a name="github"></a>Create GitHub sites 
 
 [GitHub](http://www.github.com) is a website (really a cloud services provider) that was created to support large open-source software development projects.  [Recently acquired by Microsoft](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/), it is a key source for making and sharing software and documentation.  
 
@@ -80,18 +92,24 @@ of how it relates to GitHub.
 introduction, if you can stand the upselling.
 - Ask for help from someone who knows what they are doing (a classmate, a friend, or if all else fails me!)
 
-### Collect Examples and References
+### <a name="references"></a> Collect Examples and References
 
 The final goal for this week is **to begin a library of examples and references** related to the general
-area your group is interested in, and to document that library in your github site.  
-This is essentially a google/library research project.  As you set out, you will likely encounter a number
-of different resources: A reasonable goal is 6-10 references of at least three different types; 
-the types I have in mind include:
+area your group is interested in, and to document that library in your github site in the README file.
+
+You can see my example of this for my (hypothetical) twitter project in [my demo github repo](http://github.com/jeremy9959/Math5800-JTT-Demo).
+
+This is essentially a google/library research project. 
+A reasonable goal is 6-10 references of at least three different types.  You should provide a brief
+indication of what the reference contains.  These links are supposed to be useful to you so don't 
+just blindly copy them.
+
+The types I have in mind include:
 
 - Published scholarly articles from journals or conference proceedings. You can identify them because they have references to the journal or conference. They are typically quite condensed and  rather technical, but they sometimes give details not available elsewhere. It's *very important* to consider the place the article was published or the conference where the work was presented in deciding whether the work is likely to be useful - you can get anything published somewhere, especially in this field. 
 
 	A premiere conference in neural networks is [NIPS](https://papers.nips.cc/) (Neural Information Processing Systems) and a 
-	lot of breakthroughs appear in its proceedings such as [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf).  The [Journal of Machine Learning Research](http://www.jmlr.org/) is a premier journal in this field, where for example this breakthrough paper [Visualizing Data with t-SNE](http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf) appeared.
+	lot of breakthroughs appear in its proceedings. One such is the 2012 paper by Krizhevsky, Suskever, and Hinton called [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf), which demonstrated the feasibility of training huge neural networks to do image classification on massive scale. This paper has 55500 citations on google scholar, or roughly 7000 per year since publication.    The [Journal of Machine Learning Research](http://www.jmlr.org/) is a premier journal in this field, where for example this breakthrough paper [Visualizing Data with t-SNE](http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf) describing the now widely used t-sne algorithm for clustering was described.  It 'only' has 11500 citations since 2008.
 
 - Arxiv preprints.  The Arxiv is a preprint server in the sciences -- it's the same resource used by mathematicians. It's
 unrefereed so it has the advantage that you get quick access to results and it has the disadvantage that it has no
