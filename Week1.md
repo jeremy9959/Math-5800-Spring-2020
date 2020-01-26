@@ -35,12 +35,13 @@ Bottom line is that **by Wednesday, January 28** I'd like to know who is working
 [GitHub](http://www.github.com) is a website (really a cloud services provider) that was created to support large open-source software development projects.  [Recently acquired by Microsoft](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/), it is a key source for making and sharing software and documentation.  
 
 My github profile is [here](https://github.com/jeremy9959).  It consists of some profile information plus
-a bunch of *repositories*, each of whic contains code or documents related to a  projects I am working on 
-(in widely varying states of completion).  
+a bunch of *repositories*, each of which contains code or documents related to a  projects I am (or was)  working on 
+(in widely varying states of completion). 
 
 One of the repositories is the source code for the
 [website for this course](https://github.com/jeremy9959/Math-5800-Spring-2020) and I use GitHub to generate
-the [jeremy9959.net page](http://jeremy9959.net) automatically.
+the [jeremy9959.net page](http://jeremy9959.net) automatically.  Making web pages using GitHub
+is pretty easy but we'll save that for later.
 
 The backend of the GitHub site is the software tool called [git](https://git-scm.com).  Git is a beautiful piece
 of software that allows you to track versions of your work, undo changes, make experiments without messing up stuff
@@ -51,7 +52,7 @@ To elaborate a little, you would use [git](https://git-scm.com) to control manag
 your computer, to keep track of changes and make checkpoints so you can get back to a working state if you mess
 up your project.  With [GitHub](http://github.com) you can reproduce your directory in the cloud, share it with others,
 and also have a backup in case something happens to your local machine.  There are other cloud providers
-that do things like [GitHub](http://github.com), such as [GitLab](http://gitlab.com) but [GitHub](http://github.com)
+that do things like [GitHub](http://github.com), such as [GitLab](http://gitlab.com), but [GitHub](http://github.com)
 is the biggest and best known.
 
 Knowing the basics of how to use git and GitHub is a baseline skill for any scientist -- or anyone wanting to work in a technical field in industry.  Therefore:
@@ -89,8 +90,8 @@ the types I have in mind include:
 
 - Published scholarly articles from journals or conference proceedings. You can identify them because they have references to the journal or conference. They are typically quite condensed and  rather technical, but they sometimes give details not available elsewhere. It's *very important* to consider the place the article was published or the conference where the work was presented in deciding whether the work is likely to be useful - you can get anything published somewhere, especially in this field. 
 
-A premiere conference in neural networks is [NIPS](https://papers.nips.cc/) (Neural Information Processing Systems) and a 
-lot of breakthroughs appear in its proceedings such as [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf).  The [Journal of Machine Learning Research](http://www.jmlr.org/) is a premier journal in this field, where for example this breakthrough paper [Visualizing Data with t-SNE](http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf) appeared.
+	A premiere conference in neural networks is [NIPS](https://papers.nips.cc/) (Neural Information Processing Systems) and a 
+	lot of breakthroughs appear in its proceedings such as [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf).  The [Journal of Machine Learning Research](http://www.jmlr.org/) is a premier journal in this field, where for example this breakthrough paper [Visualizing Data with t-SNE](http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf) appeared.
 
 - Arxiv preprints.  The Arxiv is a preprint server in the sciences -- it's the same resource used by mathematicians. It's
 unrefereed so it has the advantage that you get quick access to results and it has the disadvantage that it has no
