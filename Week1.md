@@ -115,7 +115,7 @@ of [projects](http://cs229.stanford.edu/projects.html) done by students in that 
 
 #### Where should I end up?
 
-Here is my [demo github repository for my hypothetical twitter project]https://github.com/jeremy9959/Math5800-JTT-Demo/blob/master/README.md).
+Here is my [demo github repository for my hypothetical twitter project](https://github.com/jeremy9959/Math5800-JTT-Demo/blob/master/README.md).
 
 
 
