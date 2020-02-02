@@ -14,6 +14,13 @@ Math 5800, Spring Term 2020<br>
 - [Course Information Page](CourseInfo.md) 
 - [Skills and Interests Inventory.](SkillsAndInterests.md)
 
+### Notes
+
+- [MNIST](notebooks/MNISTQuickLook.ipynb)
+- [Logistic Regression](notebooks/LogisticRegression.ipynb)
+- [Curse of Dimensionality](notebooks/CurseOfDimensionality.ipynb)
+- [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
+
 ### References
 
 - [Python Programming References](ProgrammingReferences.md)
