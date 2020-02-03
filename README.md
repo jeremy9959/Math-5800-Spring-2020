@@ -17,7 +17,6 @@ Math 5800, Spring Term 2020<br>
 ### Notes
 
 - [MNIST](notebooks/MNISTQuickLook.html)
-- [Logistic Regression](notebooks/LogisticRegression.html) -- note that this is a work in progress
 - [Curse of Dimensionality](notebooks/CurseOfDimensionality.html)
 - [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
 
