@@ -27,7 +27,7 @@ of the method you are studying.**
 Both of the rather advanced references for the course:
 
 - [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by  [Christopher Bishop](https://www.microsoft.com/en-us/research/people/cmbishop/) 
-- [The elements of statistical learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf] by [Hastie](https://web.stanford.edu/~hastie/),	[Tibshirani](https://statweb.stanford.edu/~tibs/), and [Friedman](https://statweb.stanford.edu/~jhf/)
+- [The elements of statistical learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf) by [Hastie](https://web.stanford.edu/~hastie/),	[Tibshirani](https://statweb.stanford.edu/~tibs/), and [Friedman](https://statweb.stanford.edu/~jhf/)
 
 contain treatments of Logistic Regression and Nearest Neighbor methods. 
 However, there are many other resources and more elementary books on statistics may have more accessible introductions.
