@@ -18,6 +18,8 @@ Math 5800, Spring Term 2020<br>
 
 - [MNIST](notebooks/MNISTQuickLook.html)
 - [Curse of Dimensionality](notebooks/CurseOfDimensionality.html)
+- [Bias and Variance](notebooks/BiasVariance.html)
+- [Polynomial Regression](notebooks/PolynomialRegression.html)
 - [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
 
 ### References
