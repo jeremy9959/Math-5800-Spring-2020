@@ -21,6 +21,7 @@ Math 5800, Spring Term 2020<br>
 - [Bias and Variance](notebooks/BiasVariance.html)
 - [Polynomial Regression](notebooks/PolynomialRegression.html)
 - [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
+- [Precision and Recall](notebooks/PrecisionRecall.html)
 
 ### References
 
