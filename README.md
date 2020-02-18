@@ -14,20 +14,28 @@ Math 5800, Spring Term 2020<br>
 - [Course Information Page](CourseInfo.md) 
 - [Skills and Interests Inventory.](SkillsAndInterests.md)
 
-### Notes
+### Resources
 
 - [MNIST](notebooks/MNISTQuickLook.html)
-- [Curse of Dimensionality](notebooks/CurseOfDimensionality.html)
-- [Bias and Variance](notebooks/BiasVariance.html)
-- [Polynomial Regression](notebooks/PolynomialRegression.html)
 - [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
-- [Precision and Recall](notebooks/PrecisionRecall.html)
-
-### References
-
 - [Python Programming References](ProgrammingReferences.md)
 
-### Assignments
+### "Syllabus"
+
+Notes from the first two weeks:
 
 - [Week 1](Week1.md)
 - [Week 2](Week2.md)
+
+For the remainder of the course we will follow this outline:
+
+- Mondays: I will meet with each group for about 15 minutes during class just to make sure everyone is making progress.
+- Wednesdays: Each group will present where they are to the class.  The rules are that everyone in the group must speak.
+- Fridays: I will usually give a brief presentation on a topic in machine learning.  So far I've discussed:
+
+	- [Bias and Variance](notebooks/BiasVariance.html)
+	- [Polynomial Regression](notebooks/PolynomialRegression.html)  
+	- [Curse of Dimensionality](notebooks/CurseOfDimensionality.html)
+	- [Precision and Recall](notebooks/PrecisionRecall.html)
+  
+  
