@@ -9,4 +9,4 @@ Notices of the AMS, March, 2020.
 6. [Sparse Logistic Regression](https://scikit-learn.org/stable/auto_examples/linear_model/plot_sparse_logistic_regression_mnist.html) from scikit-learn documentation.
 7. [How the backpropagation algorithm works](http://neuralnetworksanddeeplearning.com/chap2.html), Chapter 2 in
 [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by [Michael Nielsen](http://michaelnielsen.org).
-
+8.  Janssens, Martens.  [Reflection on modern methods: Revisiting the area under the ROC curve](https://academic.oup.com/ije/advance-article/doi/10.1093/ije/dyz274/5714095), International Journal of Epidemiology, January, 2020.
