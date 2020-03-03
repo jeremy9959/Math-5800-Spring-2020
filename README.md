@@ -19,6 +19,11 @@ Math 5800, Spring Term 2020<br>
 - [MNIST](notebooks/MNISTQuickLook.html)
 - [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
 - [Python Programming References](ProgrammingReferences.md)
+- [References](References.md)
+
+
+
+
 
 ### "Syllabus"
 
