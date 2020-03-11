@@ -44,4 +44,4 @@ For the remainder of the course we will follow this outline:
 	- [Precision and Recall](notebooks/PrecisionRecall.html)
     - [Principal Components Analysis](notebooks/PCA.html)
     - [Neural Networks](notebooks/NNNotes.pdf)
-
+	- [Convolution](notebooks/Convolution.html)
