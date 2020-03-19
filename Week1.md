@@ -106,6 +106,18 @@ just blindly copy them.
 
 The types I have in mind include:
 
+- Books.  These may be old-fashioned but they are often definitive, detailed accounts of exactly what you need to know. Here are three
+particularly useful sources:
+	- [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf), by [Christopher Bishop](https://www.microsoft.com/en-us/research/people/cmbishop/) 
+	while 10 years old or so, has a detailed account of many different approaches to machine learning problems with lots of 
+	mathematical background, as well as problems to try.
+	- [The elements of statistical learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf] by [Hastie](https://web.stanford.edu/~hastie/),
+	[Tibshirani](https://statweb.stanford.edu/~tibs/), and [Friedman](https://statweb.stanford.edu/~jhf/) is an authoritative introduction to
+	machine learning from the perspective of applied statistics.
+	- [The OReilly Library](http://www.oreilly.com) contains many detailed, and practical introductions to implementations of machine learning
+	algorithms and pretty much anything else in the computer world.  Its entire content is freely available through the UConn library.
+	Go to the O'Reilly site and log in using "SSO" and your UConn netid.
+
 - Published scholarly articles from journals or conference proceedings. You can identify them because they have references to the journal or conference. They are typically quite condensed and  rather technical, but they sometimes give details not available elsewhere. It's *very important* to consider the place the article was published or the conference where the work was presented in deciding whether the work is likely to be useful - you can get anything published somewhere, especially in this field. 
 
 	A premiere conference in neural networks is [NIPS](https://papers.nips.cc/) (Neural Information Processing Systems) and a 
