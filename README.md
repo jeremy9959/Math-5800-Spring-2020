@@ -23,17 +23,17 @@ Math 5800, Spring Term 2020<br>
 
 ### "Syllabus"
 
-Notes from the first two weeks:
-
-- [Week 1](Week1.md)
-- [Week 2](Week2.md)
-
 **Note regarding COVID-19:** In light of the COVID-19 pandemic, the balance of this course will
 be conducted *online*.  The final project will continue to be a github repo or website.  The university
 has announced changes to the *pass/fail* regulations and has waived  the *drop* deadline. This class
 is already being offered pass/fail.
 
-For the remainder of the course we will follow this outline:
+Notes from the first two weeks:
+
+- [Week 1](Week1.md)
+- [Week 2](Week2.md)
+
+We will continue our practice so far:
 
 - Mondays: I will meet with each group for about 15 minutes during class just to make sure everyone is making progress.
 - Wednesdays: Each group will present where they are to the class.  The rules are that everyone in the group must speak- Fridays: I will usually give a brief presentation on a topic in machine learning.  So far I've discussed:
