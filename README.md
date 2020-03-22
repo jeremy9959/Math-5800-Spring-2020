@@ -44,4 +44,4 @@ We will continue our practice so far:
 	- [Precision and Recall](notebooks/PrecisionRecall.html)
     - [Principal Components Analysis](notebooks/PCA.html)
     - [Neural Networks](notebooks/NNNotes.pdf)
-	- [Convolution](notebooks/Convolution.html)
+	- [Convolution](notebooks/Convolution.html) [slides](notebooks/Convolution.slides.html)
