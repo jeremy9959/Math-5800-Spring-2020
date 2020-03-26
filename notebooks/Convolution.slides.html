@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
+<head>
 
-<title>Convolution</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>Convolution slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
 
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Loading the mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<!-- Get Font-awesome from cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -13021,66 +13072,140 @@ ul.typeahead-list  > li > a.pull-right {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-body {
-  overflow: visible;
-  padding: 8px;
+.reveal {
+  font-size: 160%;
 }
-
-div#notebook {
-  overflow: visible;
-  border-top: none;
-}@media print {
-  div.cell {
-    display: block;
-    page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
-  }
-  div.output { 
-    display: block;
-    page-break-inside: avoid; 
-  }
+.reveal pre {
+  width: inherit;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.reveal pre code {
+  padding: 0px;
+}
+.reveal section img {
+  border: 0px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+.reveal i {
+  font-style: normal;
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal.fade {
+  opacity: 1;
+}
+.reveal .progress {
+  position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
+}
+div.input_area {
+  padding: 0.06em;
+}
+div.code_cell {
+  background-color: transparent;
+}
+div.prompt {
+  width: 11ex;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  text-align: right;
+}
+div.output_area pre {
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+}
+div.output_prompt {
+  /* 5px right shift to account for margin in parent container */
+  margin: 5px 5px 0 0;
+}
+div.text_cell.rendered .rendered_html {
+  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
+  overflow-y: hidden;
+}
+a.anchor-link {
+  /* There is still an anchor, we are only hidding it */
+  display: none;
+}
+.rendered_html p {
+  text-align: inherit;
+}
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
-<body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+</head>
 
+
+<body>
+
+
+<div class="reveal">
+<div class="slides">
+<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Setting-up">Setting up<a class="anchor-link" href="#Setting-up">&#182;</a></h3>
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -13127,10 +13252,10 @@ div#notebook {
 
 
 
-<div id="eeeecb4b-fe03-409c-9829-07abb535417a"></div>
+<div id="30256b0a-88f4-45f8-b2d3-e6e037b1b5bf"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#eeeecb4b-fe03-409c-9829-07abb535417a');
+var element = $('#30256b0a-88f4-45f8-b2d3-e6e037b1b5bf');
 
 (function(root) {
   function now() {
@@ -13432,7 +13557,7 @@ var element = $('#eeeecb4b-fe03-409c-9829-07abb535417a');
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13440,7 +13565,7 @@ var element = $('#eeeecb4b-fe03-409c-9829-07abb535417a');
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13455,7 +13580,7 @@ $$<p>where $c_{00}(\mathbf{R})$ is the space of sequences that are eventually ze
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13472,7 +13597,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13492,7 +13617,7 @@ with the same convention that $a_i=b_i=0$ if $i&lt;0$.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13503,7 +13628,7 @@ a(fg) = a(f)*a(g).
 $$
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13517,7 +13642,7 @@ $$
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13539,7 +13664,7 @@ $$<p>is  infinite and you need the $L^2$ condition to show that it converges.</p
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13552,7 +13677,7 @@ that <strong>the fourier transform of the product of functions is the convolutio
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13570,7 +13695,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13579,7 +13704,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13595,7 +13720,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13603,7 +13728,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
@@ -13617,7 +13742,7 @@ $$</p>
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
@@ -13663,10 +13788,10 @@ $$</p>
 
 
 
-<div id="b0ebc804-b3d3-4b75-bf72-41d9349ed0c1"></div>
+<div id="042a3b16-025d-407e-bc68-cd475eb4e033"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#b0ebc804-b3d3-4b75-bf72-41d9349ed0c1');
+var element = $('#042a3b16-025d-407e-bc68-cd475eb4e033');
 (function(root) {
   function embed_document(root) {
     
@@ -13701,7 +13826,7 @@ var element = $('#b0ebc804-b3d3-4b75-bf72-41d9349ed0c1');
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13715,7 +13840,7 @@ $$
 $$
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13727,7 +13852,7 @@ about what to do.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13739,7 +13864,7 @@ about what to do.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13751,7 +13876,7 @@ when $j$ is outside the dimensions of the (finite) array.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13763,7 +13888,7 @@ $$
 $$
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13771,7 +13896,7 @@ $$
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13779,7 +13904,7 @@ $$
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -13795,7 +13920,7 @@ $$
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
@@ -13845,10 +13970,10 @@ $$
 
 
 
-<div id="bba8a657-25b3-4b6c-b86d-1758abf3428f"></div>
+<div id="1f27164c-9e72-487e-86ea-bc38267ae195"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#bba8a657-25b3-4b6c-b86d-1758abf3428f');
+var element = $('#1f27164c-9e72-487e-86ea-bc38267ae195');
 (function(root) {
   function embed_document(root) {
     
@@ -13883,7 +14008,7 @@ var element = $('#bba8a657-25b3-4b6c-b86d-1758abf3428f');
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13891,14 +14016,14 @@ var element = $('#bba8a657-25b3-4b6c-b86d-1758abf3428f');
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Convolution-in-two-dimensions">Convolution in two dimensions<a class="anchor-link" href="#Convolution-in-two-dimensions">&#182;</a></h2>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13908,7 +14033,7 @@ and take $g(x,y)$ to be the function taking the value $1$ on a square centered a
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -13926,7 +14051,7 @@ and take $g(x,y)$ to be the function taking the value $1$ on a square centered a
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13935,7 +14060,7 @@ and the other two are vertical and horizontal lines.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
@@ -13950,7 +14075,7 @@ and the other two are vertical and horizontal lines.</p>
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -14007,10 +14132,10 @@ and the other two are vertical and horizontal lines.</p>
 
 
 
-<div id="12d93277-adf2-4f40-8406-8f64960fde63"></div>
+<div id="d6186112-7fa2-4b9b-8138-27e02d08f71b"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#12d93277-adf2-4f40-8406-8f64960fde63');
+var element = $('#d6186112-7fa2-4b9b-8138-27e02d08f71b');
 (function(root) {
   function embed_document(root) {
     
@@ -14045,7 +14170,7 @@ var element = $('#12d93277-adf2-4f40-8406-8f64960fde63');
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14055,7 +14180,7 @@ it gives an array of dimensions 120x120x4.  We will mostly ignore the last (alph
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
@@ -14120,10 +14245,10 @@ it gives an array of dimensions 120x120x4.  We will mostly ignore the last (alph
 
 
 
-<div id="5db4456b-f000-49d7-afe0-593bfc43579a"></div>
+<div id="923bc232-3a64-4366-b81e-fe55bedf13dc"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#5db4456b-f000-49d7-afe0-593bfc43579a');
+var element = $('#923bc232-3a64-4366-b81e-fe55bedf13dc');
 (function(root) {
   function embed_document(root) {
     
@@ -14158,7 +14283,7 @@ var element = $('#5db4456b-f000-49d7-afe0-593bfc43579a');
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14167,7 +14292,7 @@ This gives a weighted average for the pixel value at each point.  The variance o
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
@@ -14221,10 +14346,10 @@ This gives a weighted average for the pixel value at each point.  The variance o
 
 
 
-<div id="1b5d390d-620c-4706-ba98-b95a674bb43f"></div>
+<div id="a6aa3d81-ee8d-402d-af2f-b6385e93ebe0"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#1b5d390d-620c-4706-ba98-b95a674bb43f');
+var element = $('#a6aa3d81-ee8d-402d-af2f-b6385e93ebe0');
 (function(root) {
   function embed_document(root) {
     
@@ -14259,7 +14384,7 @@ var element = $('#1b5d390d-620c-4706-ba98-b95a674bb43f');
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14268,7 +14393,7 @@ What happens when our 3x3 kernel hits an edge of our matrix?</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14279,7 +14404,7 @@ is HxW, then you can fit M-W+1 copies of the kernel in each row and N-H+1 copies
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14292,7 +14417,7 @@ with our convolution producing output of the same size as the original image.</l
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14301,7 +14426,7 @@ the output size is going to be (M-W+2p)/s+1.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14311,7 +14436,7 @@ $f:G\to \mathbf{C}^{*}$ with $f(x+y)=f(x)f(y)$.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14327,7 +14452,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14339,7 +14464,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14351,7 +14476,7 @@ $$</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14373,7 +14498,7 @@ this requires $O(d^2)$ multiplications.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14398,12 +14523,74 @@ way to multiply polynomials.</p>
 </div>
 </div>
 
+</div></section></section>
 </div>
-    </div>
-  </div>
-</body>
+</div>
 
- 
+<script>
+
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+    ],
+
+    function(head, Reveal){
+
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+
+            transition: "slide",
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
+                  condition: function() { return !document.body.classList; } },
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
+                  async: true,
+                  condition: function() { return !!document.body.classList; } }
+            ]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+
+    }
+
+);
+</script>
+
+</body>
 
 
 </html>
