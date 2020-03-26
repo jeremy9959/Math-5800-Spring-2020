@@ -20,6 +20,7 @@ Math 5800, Spring Term 2020<br>
 - [Simplified Git Workflow](notebooks/QuickGitWorkflow.md)
 - [Python Programming References](ProgrammingReferences.md)
 - [Google DataSets Announcement](https://blog.google/products/search/discovering-millions-datasets-web/)
+- [Using the UConn hpc cluster gpu nodes](./Cluster.md)
 
 ### "Syllabus"
 
