@@ -82,5 +82,11 @@ In particular, following up on a question from class,
 the $n$-fold repeated convolution with the standard gaussian of mean zero and variance $\sigma^2$
 is equivalent to convolution with a gaussian of mean zero and variance $n\sigma^2$.
 
+**Remark 2:** For the probabilists, if $X$ and $Y$ are independent normally distributed random variables
+with mean $\mu$ and $\nu$ and variances $\sigma$ and $\tau$ respectively, then the
+distribution of $X+Y$ is the convolution of the associated gaussian distribution functions.
+From this point of view the fact that the mean and variance of $X+Y$ are $\mu+\nu$ and $\sigma^2+\tau^2$
+respectively are natural.
+
 
 
