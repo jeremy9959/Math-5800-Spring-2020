@@ -46,3 +46,4 @@ We will continue our practice so far:
     - [Principal Components Analysis](notebooks/PCA.html)
     - [Neural Networks](notebooks/NNNotes.pdf)
 	- [Convolution html](notebooks/Convolution.html) -- [slides](notebooks/Convolution.slides.html) -- [pdf](notebooks/Convolution.pdf)
+    - [The Convolution of Gaussians is Gaussian](notebooks/convolution_of_gaussians.html)

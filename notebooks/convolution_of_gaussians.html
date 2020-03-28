@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Convolution of Gaussians is Gaussian</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Convolution of Gaussians is Gaussian</h1>
+</header>
+<p>A gaussian is a function of the form <span class="math inline">\(f(x)=Ae^{-(x-\mu)^2/\sigma^2}\)</span> for some constant <span class="math inline">\(A\)</span> – when <span class="math inline">\(A\)</span> is chosen to make the total integral of <span class="math inline">\(f\)</span> equal to <span class="math inline">\(1\)</span>, you obtain the probability distribution function for a normally distributed random variable of mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p>In class I mentioned the result that the convolution of two gaussian functions is again a gaussian. This is usually proved by:</p>
+<ul>
+<li>showing that the Fourier transform <span class="math inline">\(\hat{f}\)</span> of a gaussian <span class="math inline">\(f\)</span> is a gaussian;</li>
+<li>observing that the product <span class="math inline">\(fg\)</span> of gaussians <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is a gaussian</li>
+<li>using the convolution theorem to conclude that if <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are gaussians, then so is</li>
+</ul>
+<p><span class="math display">\[
+f*g = \widehat{\hat{f}\hat{g}}.
+\]</span></p>
+<p>However, one can also simply work out the integral. If <span class="math inline">\(f=e^{-(x-\mu)^2/\sigma^2}\)</span> and <span class="math inline">\(g=e^{-(x-\nu)^2/\tau^2}\)</span> then</p>
+<p><span class="math display">\[
+(f*g)(x) = \int e^{-(t-\mu)^2/\sigma^2-(x-t-\nu)^2/\tau^2}\,dt.
+\]</span></p>
+<p><strong>Lemma:</strong> Suppose <span class="math inline">\(Q(x,t)\)</span> is a quadratic function in two variables of the form <span class="math display">\[
+Q(x,t) = A(t-r)^2+B(x-t-s)^2
+\]</span> where <span class="math inline">\(A\)</span>,<span class="math inline">\(B\)</span>,<span class="math inline">\(r\)</span>, and <span class="math inline">\(s\)</span> are constants. Then there are constants <span class="math inline">\(A&#39;\)</span>,<span class="math inline">\(B&#39;\)</span>, <span class="math inline">\(r&#39;\)</span> and <span class="math inline">\(s&#39;\)</span> so that <span class="math display">\[
+Q(x,t) = A&#39;(x-r&#39;)^2+B&#39;(t-x-s&#39;).
+\]</span></p>
+<p><strong>Proof:</strong> This is an exercise in completing the square. Write <span class="math display">\[
+Q(x,t)=ax^2+bxt+ct^2+dx+et+f.
+\]</span> First complete the square to eliminate the <span class="math inline">\(et\)</span> term. Let <span class="math inline">\(t_1=t-\frac{e}{2c}\)</span>. Then: <span class="math display">\[
+Q(x,t)=ax^2+bx\left(\frac{e}{2c}\right)+dx+ct_1^2-\left(\frac{e}{2c}\right)^2+f+bxt_1
+\]</span> Next complete the square to eliminate the <span class="math inline">\(xt_1\)</span> term by setting <span class="math inline">\(t_2=t_1-\frac{b}{2c}x\)</span> so that <span class="math display">\[
+Q(x,t)=ax^2+(b\left(\frac{e}{2c}\right)+d)x+c(t_2-\frac{b}{2c}x)^2-\left(\frac{b}{2c}\right)^2-\left(\frac{e}{2c}\right)^2+f
+\]</span> Finally complete the square on the pure <span class="math inline">\(x\)</span> terms to get the desired form.</p>
+<p><strong>Proposition:</strong> <span class="math inline">\((f*g)\)</span> is a gaussian.</p>
+<p><strong>Proof:</strong> By the lemma, <span class="math inline">\((f*g)\)</span> is can be written <span class="math display">\[
+(f*g)(x)=\int e^{-A(x-r)^2}e^{-B(t-x-s)^2}dt=e^{-A(x-r)^2}\int_{-\infty}^{\infty} e^{-B(t-x-s)^2}dt
+\]</span> Since the integral runs from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span> its value is independent of the value of <span class="math inline">\(x\)</span> so the integral yields a constant <span class="math inline">\(C\)</span> leaving <span class="math display">\[
+(f*g)(x) = Ce^{-A(x-r)^2}
+\]</span> which is a gaussian.</p>
+<p><strong>Remark:</strong> If you have more patience than I you can get the constants exactly. The full result is that if <span class="math inline">\(F\)</span> is the gaussian distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(G\)</span> is the gaussian distribution with mean <span class="math inline">\(\nu\)</span> and variance <span class="math inline">\(\tau\)</span>, then <span class="math inline">\(F*G\)</span> is the gaussian distribution with mean <span class="math inline">\(\mu+\nu\)</span> and variance <span class="math inline">\(\sigma^2+\tau^2\)</span>.</p>
+<p>In particular, following up on a question from class, the <span class="math inline">\(n\)</span>-fold repeated convolution with the standard gaussian of mean zero and variance <span class="math inline">\(\sigma^2\)</span> is equivalent to convolution with a gaussian of mean zero and variance <span class="math inline">\(n\sigma^2\)</span>.</p>
+</body>
+</html>
