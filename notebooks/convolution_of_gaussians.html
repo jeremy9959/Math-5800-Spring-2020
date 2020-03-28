@@ -22,7 +22,7 @@
 <header id="title-block-header">
 <h1 class="title">Convolution of Gaussians is Gaussian</h1>
 </header>
-<p>A gaussian is a function of the form <span class="math inline">\(f(x)=Ae^{-(x-\mu)^2/\sigma^2}\)</span> for some constant <span class="math inline">\(A\)</span> – when <span class="math inline">\(A\)</span> is chosen to make the total integral of <span class="math inline">\(f\)</span> equal to <span class="math inline">\(1\)</span>, you obtain the probability distribution function for a normally distributed random variable of mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p>A gaussian is a function of the form <span class="math inline">\(f(x)=Ae^{-(x-\mu)^2/2\sigma^2}\)</span> for some constant <span class="math inline">\(A\)</span> – when <span class="math inline">\(A\)</span> is chosen to make the total integral of <span class="math inline">\(f\)</span> equal to <span class="math inline">\(1\)</span>, you obtain the probability distribution function for a normally distributed random variable of mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
 <p>In class I mentioned the result that the convolution of two gaussian functions is again a gaussian. This is usually proved by:</p>
 <ul>
 <li>showing that the Fourier transform <span class="math inline">\(\hat{f}\)</span> of a gaussian <span class="math inline">\(f\)</span> is a gaussian;</li>
@@ -36,24 +36,35 @@ f*g = \widehat{\hat{f}\hat{g}}.
 <p><span class="math display">\[
 (f*g)(x) = \int e^{-(t-\mu)^2/\sigma^2-(x-t-\nu)^2/\tau^2}\,dt.
 \]</span></p>
-<p><strong>Lemma:</strong> Suppose <span class="math inline">\(Q(x,t)\)</span> is a quadratic function in two variables of the form <span class="math display">\[
+<p><strong>Lemma:</strong> Suppose <span class="math inline">\(Q(x,t)\)</span> is a quadratic function in two variables of the form</p>
+<p><span class="math display">\[
 Q(x,t) = A(t-r)^2+B(x-t-s)^2
-\]</span> where <span class="math inline">\(A\)</span>,<span class="math inline">\(B\)</span>,<span class="math inline">\(r\)</span>, and <span class="math inline">\(s\)</span> are constants. Then there are constants <span class="math inline">\(A&#39;\)</span>,<span class="math inline">\(B&#39;\)</span>, <span class="math inline">\(r&#39;\)</span> and <span class="math inline">\(s&#39;\)</span> so that <span class="math display">\[
+\]</span></p>
+<p>where <span class="math inline">\(A\)</span>,<span class="math inline">\(B\)</span>,<span class="math inline">\(r\)</span>, and <span class="math inline">\(s\)</span> are constants. Then there are constants <span class="math inline">\(A&#39;\)</span>,<span class="math inline">\(B&#39;\)</span>, <span class="math inline">\(r&#39;\)</span> and <span class="math inline">\(s&#39;\)</span> so that</p>
+<p><span class="math display">\[
 Q(x,t) = A&#39;(x-r&#39;)^2+B&#39;(t-x-s&#39;).
 \]</span></p>
 <p><strong>Proof:</strong> This is an exercise in completing the square. Write <span class="math display">\[
 Q(x,t)=ax^2+bxt+ct^2+dx+et+f.
-\]</span> First complete the square to eliminate the <span class="math inline">\(et\)</span> term. Let <span class="math inline">\(t_1=t-\frac{e}{2c}\)</span>. Then: <span class="math display">\[
+\]</span> First complete the square to eliminate the <span class="math inline">\(et\)</span> term. Let <span class="math inline">\(t_1=t-\frac{e}{2c}\)</span>. Then:</p>
+<p><span class="math display">\[
 Q(x,t)=ax^2+bx\left(\frac{e}{2c}\right)+dx+ct_1^2-\left(\frac{e}{2c}\right)^2+f+bxt_1
-\]</span> Next complete the square to eliminate the <span class="math inline">\(xt_1\)</span> term by setting <span class="math inline">\(t_2=t_1-\frac{b}{2c}x\)</span> so that <span class="math display">\[
+\]</span></p>
+<p>Next complete the square to eliminate the <span class="math inline">\(xt_1\)</span> term by setting <span class="math inline">\(t_2=t_1-\frac{b}{2c}x\)</span> so that</p>
+<p><span class="math display">\[
 Q(x,t)=ax^2+(b\left(\frac{e}{2c}\right)+d)x+c(t_2-\frac{b}{2c}x)^2-\left(\frac{b}{2c}\right)^2-\left(\frac{e}{2c}\right)^2+f
-\]</span> Finally complete the square on the pure <span class="math inline">\(x\)</span> terms to get the desired form.</p>
+\]</span></p>
+<p>Finally complete the square on the pure <span class="math inline">\(x\)</span> terms to get the desired form.</p>
 <p><strong>Proposition:</strong> <span class="math inline">\((f*g)\)</span> is a gaussian.</p>
-<p><strong>Proof:</strong> By the lemma, <span class="math inline">\((f*g)\)</span> is can be written <span class="math display">\[
+<p><strong>Proof:</strong> By the lemma, <span class="math inline">\((f*g)\)</span> can be written</p>
+<p><span class="math display">\[
 (f*g)(x)=\int e^{-A(x-r)^2}e^{-B(t-x-s)^2}dt=e^{-A(x-r)^2}\int_{-\infty}^{\infty} e^{-B(t-x-s)^2}dt
-\]</span> Since the integral runs from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span> its value is independent of the value of <span class="math inline">\(x\)</span> so the integral yields a constant <span class="math inline">\(C\)</span> leaving <span class="math display">\[
+\]</span></p>
+<p>Since the integral runs from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span> its value is independent of the value of <span class="math inline">\(x\)</span> so the integral yields a constant <span class="math inline">\(C\)</span> leaving</p>
+<p><span class="math display">\[
 (f*g)(x) = Ce^{-A(x-r)^2}
-\]</span> which is a gaussian.</p>
+\]</span></p>
+<p>which is a gaussian.</p>
 <p><strong>Remark:</strong> If you have more patience than I you can get the constants exactly. The full result is that if <span class="math inline">\(F\)</span> is the gaussian distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(G\)</span> is the gaussian distribution with mean <span class="math inline">\(\nu\)</span> and variance <span class="math inline">\(\tau\)</span>, then <span class="math inline">\(F*G\)</span> is the gaussian distribution with mean <span class="math inline">\(\mu+\nu\)</span> and variance <span class="math inline">\(\sigma^2+\tau^2\)</span>.</p>
 <p>In particular, following up on a question from class, the <span class="math inline">\(n\)</span>-fold repeated convolution with the standard gaussian of mean zero and variance <span class="math inline">\(\sigma^2\)</span> is equivalent to convolution with a gaussian of mean zero and variance <span class="math inline">\(n\sigma^2\)</span>.</p>
 </body>
