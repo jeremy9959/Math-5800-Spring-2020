@@ -33,9 +33,16 @@ distribution in your home directory on the cluster, just as you would
 on your home computer.  You are given 50GB of storage for your home
 directory which is plenty -- unless you are doing serious work with
 large datafiles, but in that case you will need to learn more about
-the cluster than this note will tell you.
+the cluster than this note will tell you.  Alternatively, install miniconda, which
+is basically anaconda python and conda; from there you can install just the packages
+you need.  Do this using `wget`:
+```
+$ wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+$ sh Anaconda3-2020.02-Linux-x86_64.sh
+```
 
-5.  Once you have anaconda working, you can install pytorch using conda using the directions
+
+5.  Once you have anaconda working, you can install pytorch using conda following the directions
 [on the pytorch website](https://pytorch.org/get-started/locally/).   If you want to use the GPU,
 make sure to follow the instructions for CUDA on linux.  The command is:
 ```
