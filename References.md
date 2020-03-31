@@ -10,3 +10,7 @@ Notices of the AMS, March, 2020.
 7. [How the backpropagation algorithm works](http://neuralnetworksanddeeplearning.com/chap2.html), Chapter 2 in
 [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by [Michael Nielsen](http://michaelnielsen.org).
 8.  Janssens, Martens.  [Reflection on modern methods: Revisiting the area under the ROC curve](https://academic.oup.com/ije/advance-article/doi/10.1093/ije/dyz274/5714095), International Journal of Epidemiology, January, 2020.
+9. Bell, R., Yehuda Koren and Chris Volinsky. [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf), in Computer, vol 42, pp. 30-37, August 2009.
+10. [Matrix Factorization with Tensorflow](https://katbailey.github.io/post/matrix-factorization-with-tensorflow/),
+by Katherine Bailey.
+
