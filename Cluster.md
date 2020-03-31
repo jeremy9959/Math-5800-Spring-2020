@@ -9,9 +9,9 @@ You can use my name as advisor when asked.
 
 2.  Make sure you have the VPN up and running.  Then you can log in to the head node on the cluster:
 
-   ```
-   $ ssh netid@login.storrs.hpc.uconn.edu
-   ```
+	```
+	$ ssh netid@login.storrs.hpc.uconn.edu
+	```
 
 3.  You are not allowed to run jobs on the login node, so you want to start an interactive job using the
 scheduler.  If you don't need the GPU, you can run
