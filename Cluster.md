@@ -95,7 +95,7 @@ you are using tensorflow, you can use these other nodes, but I won't talk about 
 so you can use your web browser.  On the cluster:
 
  ```
- (torch) [jet08013@gpu01 ~]$ jupyter lab --no-browser --port=8888
+ (torch) [jet08013@gpu01 ~]$ jupyter lab --no-browser --port=8888 --ip=$(hostname)
  ```
  Take note of this line at the end of the output:
  ```
