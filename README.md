@@ -38,7 +38,7 @@ Notes from the first two weeks:
 We will continue our practice so far:
 
 - Mondays: I will meet with each group for about 15 minutes during class just to make sure everyone is making progress.
-- Wednesdays: Each group will present where they are to the class.  The rules are that everyone in the group must speak- Fridays: I will usually give a brief presentation on a topic in machine learning.  So far I've discussed:
+- Wednesdays: Each group will present where they are to the class.  The rules are that everyone in the group must speak.- Fridays: I will usually give a brief presentation on a topic in machine learning.  So far I've discussed:
 
 	- [Bias and Variance](notebooks/BiasVariance.html)
 	- [Polynomial Regression](notebooks/PolynomialRegression.html)  
