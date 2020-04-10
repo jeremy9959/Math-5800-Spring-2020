@@ -49,3 +49,4 @@ We will continue our practice so far:
 	- [Convolution html](notebooks/Convolution.html) -- [slides](notebooks/Convolution.slides.html) -- [pdf](notebooks/Convolution.pdf)
     - [The Convolution of Gaussians is Gaussian](notebooks/convolution_of_gaussians.html)
 	- [Gradient Descent](notebooks/GradientDescent.html) -- [slides](notebooks/GradientDescent.slides.html)
+    - [Momentum](notebooks/Momentum.html)
