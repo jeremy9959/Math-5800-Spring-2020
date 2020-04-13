@@ -13,4 +13,8 @@ Notices of the AMS, March, 2020.
 9. Bell, R., Yehuda Koren and Chris Volinsky. [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf), in Computer, vol 42, pp. 30-37, August 2009.
 10. [Matrix Factorization with Tensorflow](https://katbailey.github.io/post/matrix-factorization-with-tensorflow/),
 by Katherine Bailey.
-11. [Why Momentum Really Works](https://distill.pub/2017/momentum/)
+11. Goh, G. [Why Momentum Really Works](https://distill.pub/2017/momentum/)
+12. Goodfellow, I. *et. al.*[Generative Adversarial Nets](https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf)
+13. Zeiler, M. D. and Fergus, R. [Visualizing and understanding convolutional networks](https://arxiv.org/abs/1311.2901)
+
+
